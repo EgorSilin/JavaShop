@@ -4,17 +4,23 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <servlet>
-        <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>ru.javashop.servlets.FirstServlet</servlet-class>
+        <servlet-name>StartServlet</servlet-name>
+        <servlet-class>ru.javashop.servlets.StartServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FirstServlet</servlet-name>
-        <url-pattern>/FirstServlet</url-pattern>
+        <servlet-name>StartServlet</servlet-name>
+        <url-pattern>/StartServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
-            40
+            30
         </session-timeout>
     </session-config>
+    <resource-ref>
+        <res-ref-name>jdbc/javashopdb</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
 </web-app>

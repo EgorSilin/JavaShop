@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="GlassFish 4.0.0">
+    <CLASSES>
+      <root url="jar://C:/Program Files/glassfish-4.0/glassfish4/glassfish/modules/javax.ejb-api.jar!/" />
+      <root url="jar://C:/Program Files/glassfish-4.0/glassfish4/glassfish/modules/javax.servlet-api.jar!/" />
+      <root url="jar://C:/Program Files/glassfish-4.0/glassfish4/glassfish/modules/javax.servlet.jsp-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
