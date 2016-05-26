@@ -61,7 +61,7 @@ public class StartServlet extends HttpServlet {
                 out.println("<h3> ЗАПИСИ НЕ НАЙДЕНЫ </h3>");
             }
 
-            out.println("  <p>!!!!!!!!!!!!!!!!!!!</p>" +
+            out.println("  <p>!!!!!!!!!!!!!!!!!!!!</p>" +
                     "</div>");
         } catch (Exception ex) {
             out.println("<h1> Ошибка </h1>");
