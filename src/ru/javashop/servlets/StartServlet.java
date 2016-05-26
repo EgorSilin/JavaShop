@@ -5,15 +5,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import ru.javashop.servlets.TestDB;
 
 /**
  * Created by Admin on 25.05.2016.
  */
 //@WebServlet(name = "StartServlet", urlPatterns = {"/", "/a/b/c", "/servlets/start"})
 public class StartServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -27,20 +31,12 @@ public class StartServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        TestDB testdb = new TestDB();
+        testdb.checkDB();
+        HttpSession session = request.getSession(true);
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet StartServlet</title>");
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1> Servlet StartServlet at " + request.getContextPath() + "</h1>");
-//            out.println("<h1> #####Servlet StartServlet at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
-
-
             out.println("<html>" +
                     "<head>" +
                     "<meta http-equiv=\"content-type\" content=\"text/html; charset=\"UTF-8\">" +
@@ -54,18 +50,24 @@ public class StartServlet extends HttpServlet {
                     "  <p>Добро пожаловать в нтернет магазин! </p>" +
                     "  <p>Здесь вы можете удобно подобрать</p>" +
                     "  <p> !!!!!!!!!!!!!!!!!!!!!! </p>");
-                        TestDB testDB = new TestDB();
-                        testDB.check();
+            out.println("<h3> Session ID = " + session.getId() + "</h3>");
+
+            if (testdb.dbList instanceof ArrayList) {
+                out.println("<h3> Summary counter operation list = " + testdb.dbList.size() + "</h3>");
+                for (String note : testdb.dbList) {
+                    out.println("<h3>" + note + "</h3>");
+                }
+            } else {
+                out.println("<h3> ЗАПИСИ НЕ НАЙДЕНЫ </h3>");
+            }
+
             out.println("  <p>!!!!!!!!!!!!!!!!!!!</p>" +
-                    "  <p>&nbsp;</p>" +
-                    "  <p>&nbsp;</p>" +
-                    "</div>" +
-                    "</body>" +
-                    "</html>" +
-                    "");
-            out.println("<111>");
-            out.println("<222>");
+                    "</div>");
+        } catch (Exception ex) {
+            out.println("<h1> Ошибка </h1>");
         } finally {
+            out.println("</body>" +
+                    "</html>");
             out.close();
         }
     }
