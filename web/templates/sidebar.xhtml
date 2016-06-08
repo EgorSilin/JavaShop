@@ -66,6 +66,11 @@
                     <li><a href="#">Category 10</a></li>
                     <li><a href="#">Category 11</a></li>
                     <li><a href="#">Category 12</a></li>
+                    <h:dataTable value="#{categories.categoryList}" var="c">
+                        <h:column>
+                            #{c.name}
+                        </h:column>
+                    </h:dataTable>
                     <li class="last"><a href="#">Category 13</a></li>
                 </ul>
             </div>
