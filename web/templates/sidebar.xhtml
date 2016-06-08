@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>TestTitle</title>
+    <h:outputStylesheet library="CSS" name="style.css"/>
+</h:head>
+
+<h:body>
+    <ui:composition>
+        <!-- Search -->
+        <div class="box search">
+            <h2>Search by <span></span></h2>
+            <div class="box-content">
+                <form action="" method="post">
+
+                    <label>Keyword</label>
+                    <input type="text" class="field"/>
+
+                    <label>Category</label>
+                    <select class="field">
+                        <option value="">-- Select Category --</option>
+                    </select>
+
+                    <div class="inline-field">
+                        <label>Price</label>
+                        <select class="field small-field">
+                            <option value="">$10</option>
+                        </select>
+                        <label>to:</label>
+                        <select class="field small-field">
+                            <option value="">$50</option>
+                        </select>
+                    </div>
+
+                    <input type="submit" class="search-submit" value="Search"/>
+
+                    <p>
+                        <a href="#" class="bul">Advanced search</a><br/>
+                        <a href="#" class="bul">Contact Customer Support</a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+        <!-- End Search -->
+
+        <!-- Categories -->
+        <div class="box categories">
+            <h2>Categories <span></span></h2>
+            <div class="box-content">
+                <ul>
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                    <li><a href="#">Category 4</a></li>
+                    <li><a href="#">Category 5</a></li>
+                    <li><a href="#">Category 6</a></li>
+                    <li><a href="#">Category 7</a></li>
+                    <li><a href="#">Category 8</a></li>
+                    <li><a href="#">Category 9</a></li>
+                    <li><a href="#">Category 10</a></li>
+                    <li><a href="#">Category 11</a></li>
+                    <li><a href="#">Category 12</a></li>
+                    <li class="last"><a href="#">Category 13</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Categories -->
+    </ui:composition>
+</h:body>
+
+</html>

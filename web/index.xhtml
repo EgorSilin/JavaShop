@@ -5,7 +5,19 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello, world"/>
-</f:view>
+<h:head>
+    <title>TestTitle</title>
+    <h:outputStylesheet library="CSS" name="style.css"/>
+</h:head>
+
+<h:body>
+    <ui:composition template="templates/shell.xhtml">
+        <p>Test UI composition</p>
+        <!--<ui:define name="main">-->
+            <!--TestTest-->
+        <!--</ui:define>-->
+    </ui:composition>
+</h:body>
+
 </html>
+
