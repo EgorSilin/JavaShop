@@ -28,6 +28,7 @@ public class Categories implements Serializable{
 
             stmt = conn.createStatement();
             rs = stmt.executeQuery("select * from categories order by name");
+//            rs = stmt.executeQuery("select * from categories");
             while (rs.next()) {
                 Category category = new Category();
                 category.setName(rs.getString("name"));
