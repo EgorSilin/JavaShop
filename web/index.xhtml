@@ -13,9 +13,9 @@
 <h:body>
     <ui:composition template="templates/shell.xhtml">
         <p>Test UI composition</p>
-        <!--<ui:define name="main">-->
-            <!--TestTest-->
-        <!--</ui:define>-->
+        <ui:define name="products">
+            #{param.category_id}
+        </ui:define>
     </ui:composition>
 </h:body>
 
