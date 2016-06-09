@@ -55,20 +55,9 @@
             <div class="box-content">
                 <ul>
                     <li><a href="#">Category 1</a></li>
-                    <li><a href="#">Category 2</a></li>
-                    <li><a href="#">Category 3</a></li>
-                    <li><a href="#">Category 4</a></li>
-                    <li><a href="#">Category 5</a></li>
-                    <li><a href="#">Category 6</a></li>
-                    <li><a href="#">Category 7</a></li>
-                    <li><a href="#">Category 8</a></li>
-                    <li><a href="#">Category 9</a></li>
-                    <li><a href="#">Category 10</a></li>
-                    <li><a href="#">Category 11</a></li>
-                    <li><a href="#">Category 12</a></li>
                     <h:dataTable value="#{categories.categoryList}" var="c">
                         <h:column>
-                            #{c.name}
+                            <li><a href="#">#{c.name}</a></li>
                         </h:column>
                     </h:dataTable>
                     <li class="last"><a href="#">Category 13</a></li>
@@ -76,6 +65,35 @@
             </div>
         </div>
         <!-- End Categories -->
+        <!-- Categories 2-->
+        <h:dataTable value="#{categories.categoryList}" var="c"
+                     styleClass="categoriesTable"
+                     captionClass="categoriesTableCaption"
+                     cellspacing="0"
+                     cellpadding="0"
+                     border="0"
+                     headerClass="categoriesTableHeader"
+                     footerClass="categoriesTableFooter"
+                     rowClasses="categoriesTableOddRow, categoriesTableEvenRow"
+                     columnClasses="col1, col2">
+            <f:facet name="caption">Table Title</f:facet>
+            <h:column>
+                <f:facet name="header">Categories header 1 <span></span> </f:facet>
+                <h:link value="#{c.name} 1">
+                    <f:param name="genre_id" value="#{c.id}"/>
+                </h:link>
+                <f:facet name="footer">Categories footer 1 <span></span> </f:facet>
+            </h:column>
+            <!--<h:column>-->
+                <!--<f:facet name="header">Categories header 2 <span></span> </f:facet>-->
+                <!--<h:link value="#{c.name} 2">-->
+                    <!--<f:param name="genre_id" value="#{c.id}"/>-->
+                <!--</h:link>-->
+                <!--<f:facet name="footer">Categories footer 2 <span></span> </f:facet>-->
+            <!--</h:column>-->
+        </h:dataTable>
+        <!-- End Categories 2 -->
+
     </ui:composition>
 </h:body>
 

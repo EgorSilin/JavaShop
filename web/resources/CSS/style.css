@@ -57,6 +57,7 @@ a.cart-link:hover { text-decoration: underline;}
 .box h2 span{ position:absolute; width:10px; height:5px; background:url(../resources/images/h2-arr.gif); top:27px; right:10px; font-size:0; line-height:0;}
 .box-content { padding:5px;}
 
+
 a.bul { background:url(../resources/images/bul.gif) no-repeat 0 center; padding-left:10px;}
 
 .search { min-height:252px;}
@@ -77,6 +78,54 @@ a.bul { background:url(../resources/images/bul.gif) no-repeat 0 center; padding-
 .categories ul li.last{ border-bottom:0; padding-bottom:0;}
 .categories ul li a{ color:#5f5f5f; text-decoration: none; background:url(../resources/images/cat.gif) no-repeat 0 4px; padding-left:17px;}
 .categories ul li a:hover{ color:#8b0000; }
+
+
+
+.categoriesTable{
+	padding:1px; border:solid 1px #dedede; margin-bottom:10px; min-height:383px; min-width: 226px;
+}
+
+.categoriesTableCaption{
+	background: #7f2521; color:#fff; font-weight: normal; padding:0 5px; position:relative; height:27px; line-height:27px;
+}
+
+.categoriesTableHeader{
+	background:#7f7f7f; color:#fff; font-weight: normal; padding:0 5px; position:relative; height:27px; line-height:27px;
+}
+.categoriesTableHeader span{
+	position:absolute; width:10px; height:5px; background:url(../resources/images/h2-arr.gif); top:27px; right:10px; font-size:0; line-height:0;
+}
+.categoriesTableOddRow {border-bottom:dashed 1px #ccc; padding:5px 0;}
+.categoriesTableEvenRow {border-bottom:dashed 1px #ccc; padding:5px 0;}
+
+table.categoriesTable tr.categoriesTableOddRow {
+	background-color: #e0e9ff;
+	/*padding:5px 0;*/
+}
+
+table.categoriesTable tr.categoriesTableOddRow td {
+	/*border-top: 1px solid #ccc;*/
+	border-bottom:dashed 1px #ccc;
+	padding:5px 0;
+}
+
+table.categoriesTable tr.categoriesTableEvenRow {
+	background-color: #FBFBFB;
+	/*padding:5px 0;*/
+}
+
+table.categoriesTable tr.categoriesTableEvenRow td {
+	/*border-top: 1px solid #BBEEEE;*/
+	border-bottom:dashed 1px #cccccc;
+	padding:5px 0;
+}
+
+.categoriesTableFooter{
+	border-bottom:0; padding-bottom:0;
+}
+
+.categoriesTable a, a:visited { color:#5f5f5f; text-decoration: none; background:url(../resources/images/cat.gif) no-repeat 0 4px; padding-left:17px;}
+.categoriesTable a:hover, a:active, a:focus	{ color:#8b0000; }
 
 #slider { height:252px; position:relative; overflow:hidden; }
 #slider-holder { width:720px; height:252px; position:relative; overflow:hidden; }
